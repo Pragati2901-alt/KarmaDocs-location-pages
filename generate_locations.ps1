@@ -1,6 +1,6 @@
 # CONFIGURATION
 $BaseDir = "c:\Users\GCV\Desktop\KarmaDocs location pages\areas-we-serve"
-$TemplateFile = Join-Path $BaseDir "psychiatrist-near--indio.html"
+$TemplateFile = Join-Path $BaseDir "psychiatrist-near-indio.html"
 
 # 499 LOCATIONS
 $Locations = @(
@@ -62,8 +62,8 @@ foreach ($Loc in $Locations) {
     $Content = $Content.Replace('Serving Indio', "Serving $Loc")
     $Content = $Content.Replace('Indio Community', "$Loc Community")
     $Content = $Content.Replace('Indio Resident', "$Loc Resident")
-    $Content = $Content.Replace('psychiatrist-near--indio', "psychiatrist-near--$Slug")
-    $Content = $Content.Replace('/psychiatrist-near--indio/', "/psychiatrist-near--$Slug/")
+    $Content = $Content.Replace('psychiatrist-near-indio', "psychiatrist-near-$Slug")
+    $Content = $Content.Replace('/psychiatrist-near-indio/', "/psychiatrist-near-$Slug/")
     
     $IndioAbout = "Indio, the vibrant heart of the Coachella Valley, is home to a diverse and growing community of over 90,000 residents. Known for its rich cultural heritage, the annual Coachella and Stagecoach festivals, and the beautiful desert landscape, Indio is a city that pulses with energy and life."
     $Content = $Content.Replace($IndioAbout, $AboutText)
@@ -71,7 +71,7 @@ foreach ($Loc in $Locations) {
     $Content = $Content.Replace('downtown Indio', "downtown $Loc")
     $Content = $Content.Replace('central Indio', "central $Loc")
     
-    $FilePath = Join-Path $BaseDir "psychiatrist-near--$Slug.html"
+    $FilePath = Join-Path $BaseDir "psychiatrist-near-$Slug.html"
     [System.IO.File]::WriteAllText($FilePath, $Content)
     
     $Count++

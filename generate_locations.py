@@ -3,7 +3,7 @@ import re
 
 # CONFIGURATION
 BASE_DIR = r"c:\Users\GCV\Desktop\KarmaDocs location pages\areas-we-serve"
-TEMPLATE_FILE = os.path.join(BASE_DIR, "psychiatrist-near--indio.html")
+TEMPLATE_FILE = os.path.join(BASE_DIR, "psychiatrist-near-indio.html")
 
 # 499 LOCATIONS (Southern California Cities and Neighborhoods)
 LOCATIONS = [
@@ -57,8 +57,8 @@ def main():
     template = template.replace("Serving Indio", "Serving {{LOCATION}}")
     template = template.replace("Indio Community", "{{LOCATION}} Community")
     template = template.replace("Indio Resident", "{{LOCATION}} Resident")
-    template = template.replace("psychiatrist-near--indio", "psychiatrist-near--{{SLUG}}")
-    template = template.replace("/psychiatrist-near--indio/", "/psychiatrist-near--{{SLUG}}/")
+    template = template.replace("psychiatrist-near-indio", "psychiatrist-near-{{SLUG}}")
+    template = template.replace("/psychiatrist-near-indio/", "/psychiatrist-near-{{SLUG}}/")
     
     # The specific "About Indio" paragraph
     indio_about = "Indio, the vibrant heart of the Coachella Valley, is home to a diverse and growing community of over 90,000 residents. Known for its rich cultural heritage, the annual Coachella and Stagecoach festivals, and the beautiful desert landscape, Indio is a city that pulses with energy and life."
