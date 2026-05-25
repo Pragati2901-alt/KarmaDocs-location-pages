@@ -7,16 +7,11 @@ TEMPLATE_FILE = os.path.join(BASE_DIR, "psychiatrist-near-indio.html")
 
 # 499 LOCATIONS (Southern California Cities and Neighborhoods)
 LOCATIONS = [
-    "Palm Springs", "Rancho Mirage", "Palm Desert", "Cathedral City", "Desert Hot Springs", "Indian Wells", "La Quinta", "Coachella", "Bermuda Dunes", "Thousand Palms", "Thermal", "Mecca", "Sun City Palms", "Shadow Hills", "Sun City Shadow Hills", "Terra Lago", "Sun City Palm Desert", "Trilogy at La Quinta", "PGA West", "The Hideaway", "The Madison Club", "Ironwood Country Club", "The Reserve", "Bighorn Golf Club", "The Vintage Club", "Seven Lakes", "Deep Well", "Old Las Palmas", "Vista Las Palmas", "Twin Palms", "Tahquitz River Estates", "Warm Sands", "The Mesa", "Andreas Hills", "Los Compadres", "Movie Colony", "El Mirador", "Racquet Club Estates", "Victoria Park", "Ruth Hardy Park",
-    "Riverside", "Moreno Valley", "Corona", "Temecula", "Murrieta", "Jurupa Valley", "Menifee", "Hemet", "Eastvale", "San Jacinto", "Lake Elsinore", "Perris", "Wildomar", "Banning", "Beaumont", "Calimesa", "Canyon Lake", "Norco", "San Jacinto", "Breezy Heights", "Arlington", "Arlanza", "La Sierra", "Woodcrest", "Orangecrest", "Canyon Crest", "Highgrove", "Grand Terrace", "Bloomington", "Muscoy", "Devore", "Arrowhead Farms", "Sun City", "Quail Valley", "Sedco Hills", "Lakeland Village", "Meadowbrook", "Nuevo", "Winchester", "French Valley", "De Luz", "Aguanga", "Anza", "Mountain Center", "Idyllwild", "Pine Cove", "Fern Valley", "Valle Vista", "Green Acres", "Homeland", "Romoland", "Heritage Lake", "Silverhawk", "Wolf Creek", "Redhawk", "Paseo del Sol", "Morgan Hill",
-    "San Bernardino", "Fontana", "Ontario", "Rancho Cucamonga", "Victorville", "Rialto", "Hesperia", "Chino", "Chino Hills", "Upland", "Apple Valley", "Redlands", "Highland", "Colton", "Yucaipa", "Loma Linda", "Barstow", "San Manuel Village", "Mentone", "Oak Glen", "Forest Falls", "Angelus Oaks", "Big Bear Lake", "Big Bear City", "Sugarloaf", "Fawnskin", "Rimforest", "Lake Arrowhead", "Blue Jay", "Cedar Glen", "Twin Peaks", "Crestline", "Green Valley Lake", "Running Springs", "Skyforest", "Lake Gregory", "Valley of Enchantment", "Silverwood Lake", "Wrightwood", "Phelan", "Pinon Hills", "Oak Hills", "Lucerne Valley", "Johnson Valley", "Yucca Valley", "Joshua Tree", "Twentynine Palms", "Landers", "Morongo Valley", "Pioneertown", "Sky Valley", "Desert Edge", "North Palm Springs", "Whitewater", "Cabazon",
-    "Santa Ana", "Anaheim", "Irvine", "Huntington Beach", "Garden Grove", "Orange", "Fullerton", "Costa Mesa", "Mission Viejo", "Westminster", "Newport Beach", "Lake Forest", "Tustin", "Yorba Linda", "San Clemente", "Laguna Niguel", "La Habra", "Fountain Valley", "Placentia", "Aliso Viejo", "Cypress", "Rancho Santa Margarita", "Brea", "Stanton", "San Juan Capistrano", "Dana Point", "Laguna Hills", "Seal Beach", "Laguna Beach", "Laguna Woods", "La Palma", "Los Alamitos", "Villa Park", "Coto de Caza", "Ladera Ranch", "Las Flores", "Midway City", "North Tustin", "Rossmoor", "Silverado", "Trabuco Canyon",
-    "Long Beach", "Glendale", "Santa Clarita", "Lancaster", "Palmdale", "Pomona", "Torrance", "Pasadena", "El Monte", "Downey", "Inglewood", "West Covina", "Norwalk", "Burbank", "Compton", "South Gate", "Santa Monica", "Carson", "Santa Fe Springs", "Whittier", "Hawthorne", "Alhambra", "Lakewood", "Bellflower", "Baldwin Park", "Lynwood", "Redondo Beach", "Montebello", "Pico Rivera", "Monterey Park", "Gardena", "Huntington Park", "Arcadia", "Diamond Bar", "Paramount", "Rosemead", "Glendora", "Cerritos", "La Mirada", "Covina", "Azusa", "Bell Gardens", "La Puente", "Rancho Palos Verdes", "San Gabriel", "Culver City", "Monrovia", "Bell", "Manhattan Beach", "Hills", "Temple City", "San Dimas", "Lawndale", "La Verne", "Walnut", "Maywood", "South Pasadena", "Cudahy", "San Marino", "Commerce", "Malibu", "Agoura Hills", "Signal Hill", "Sierra Madre", "Westlake Village", "Rolling Hills Estates", "Rolling Hills", "Hidden Hills", "Bradbury", "Irwindale", "Industry", "Vernon", "La Crescenta", "Altadena", "Marina del Rey", "Playa del Rey", "Playa Vista", "Venice", "Mar Vista", "Palms", "Brentwood", "Bel Air", "Pacific Palisades", "Westwood", "Century City", "Beverly Grove", "Fairfax District", "Miracle Mile", "Hancock Park", "Windsor Square", "Larchmont Village", "Silver Lake", "Echo Park", "Atwater Village", "Glassell Park", "Mount Washington", "Eagle Rock", "Highland Park", "Boyle Heights", "Lincoln Heights", "El Sereno", "Chinatown", "Koreatown", "Wilshire Center", "Westlake", "Pico-Union", "Harvard Heights", "West Adams", "Jefferson Park", "Leimert Park", "View Park", "Windsor Hills", "Baldwin Hills", "Crenshaw", "Faircrest Heights", "Reynier Village", "Lafayette Square", "Arlington Heights", "Mid-City", "Carthay Circle", "Cheviot Hills", "Rancho Park", "Sawtelle", "Del Rey", "Studio City", "Sherman Oaks", "Encino", "Tarzana", "Woodland Hills", "Warner Center", "West Hills", "Canoga Park", "Winnetka", "Reseda", "Lake Balboa", "Van Nuys", "Valley Glen", "Valley Village", "North Hollywood", "Toluca Lake", "Sun Valley", "Pacoima", "Arleta", "Panorama City", "North Hills", "Mission Hills", "Sylmar", "San Fernando", "Granada Hills", "Porter Ranch", "Chatsworth", "Northridge", "Lake View Terrace", "Shadow Hills", "Sunland", "Tujunga",
-    "Oceanside", "Escondido", "Carlsbad", "Vista", "San Marcos", "Encinitas", "Poway", "Solana Beach", "Del Mar", "Fallbrook", "Bonsall", "Valley Center", "Pauma Valley", "Palomar Mountain", "Warner Springs", "Ranchita", "Borrego Springs", "Julian", "Santa Ysabel", "Ramona", "Lakeside", "Alpine", "Descanso", "Pine Valley", "Guatay", "Mount Laguna", "Boulevard", "Jacumba", "Campo", "Potrero", "Tecate", "Dulzura", "Jamul", "Spring Valley", "Lemon Grove", "La Mesa", "El Cajon", "Santee", "Imperial Beach", "Chula Vista", "National City", "Bonita", "Coronado", "Point Loma", "Ocean Beach", "Mission Beach", "Pacific Beach", "La Jolla", "Clairemont", "Kearny Mesa", "Mira Mesa", "Scripps Ranch", "Tierrasanta", "Allied Gardens", "Del Cerro", "San Carlos", "Navajo", "Rancho Bernardo", "Rancho Penasquitos", "Carmel Valley", "Sorento Valley", "Torrey Pines", "Torrey Hills", "Black Mountain Ranch", "Santa Luz", "Rancho Santa Fe", "Fairbanks Ranch", "4S Ranch", "Scripps Miramar Ranch",
-    "El Centro", "Brawley", "Calexico", "Imperial", "Holtville", "Westmorland", "Calipatria", "Niland", "Heber", "Seeley", "Salton City", "Ocotillo", "Winterhaven", "Palo Verde", "Bard", "Bombay Beach", "Desert Shores", "Vista del Mar", "Salton Sea Beach",
-    "Santa Barbara", "Santa Maria", "Lompoc", "Orcutt", "Goleta", "Carpinteria", "Montecito", "Summerland", "Solvang", "Buellton", "Santa Ynez", "Los Olivos", "Ballard", "Newlove", "Garey", "Sisquoc", "Casmalia", "Vandenberg Village", "Guadalupe", "Los Alamos",
-    "Ventura", "Oxnard", "Simi Valley", "Thousand Oaks", "Camarillo", "Moorpark", "Santa Paula", "Fillmore", "Port Hueneme", "Ojai", "Oak View", "Meiners Oaks", "Mira Monte", "Oak Park", "Casa Conejo", "Santa Rosa Valley", "Bell Canyon", "Lake Sherwood", "Somis", "Saticoy", "El Rio", "Nyeland Acres", "Silver Strand", "Hollywood Beach", "Hollywood by the Sea", "Piru", "Upper Ojai", "Point Mugu",
-    "Rancho Mirage South", "Rancho Mirage North", "Palm Springs West", "Palm Springs East", "Cathedral City South", "Desert Hot Springs North", "Indio Hills", "Mecca North", "Thermal South", "Coachella East", "La Quinta West", "Palm Desert South", "Indian Wells North"
+    "Palm Springs", "Twenty Nine Palms", "Rancho Mirage", "San Bernardino", "Riverside", "Moreno Valley",
+    "Temecula", "Murrieta", "Cathedral City", "Palm Desert", "La Quinta", "Indio", "Coachella",
+    "Desert Hot Springs", "Indian Wells", "Hemet", "San Jacinto", "Perris", "Lake Elsinore",
+    "Yucca Valley", "Beaumont", "Banning", "Mecca", "Thermal", "Salton City", "Desert Shores",
+    "Niland", "Calipatria", "Palo Verde"
 ]
 
 # CONTENT VARIATIONS for "About [Location]"
@@ -74,6 +69,160 @@ def main():
         content = template.replace("{{LOCATION}}", loc)
         content = content.replace("{{SLUG}}", slug)
         content = content.replace("{{ABOUT_TEXT}}", about_text)
+
+        # Proximity Office & Map Embed Customization
+        palm_springs_group = [
+            'Palm Springs', 'San Bernardino', 'Riverside', 'Moreno Valley', 'Temecula', 'Murrieta',
+            'Cathedral City', 'Desert Hot Springs', 'Hemet', 'San Jacinto', 'Perris', 'Lake Elsinore',
+            'Beaumont', 'Banning'
+        ]
+        twentynine_palms_group = [
+            'Twenty Nine Palms', 'Yucca Valley'
+        ]
+
+        if loc in palm_springs_group:
+            office_html = """            <!-- CLINIC DIRECTORY -->
+            <div style="display: grid; gap: 20px;">
+                <div
+                    style="display: flex; align-items: start; gap: 15px; background: var(--brand-gray); padding: 20px; border-radius: 20px; border: 1px solid #E5E7EB; border-left: 5px solid var(--brand-orange);">
+                    <div
+                        style="background: var(--brand-orange); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">
+                        1</div>
+                    <div>
+                        <h4 style="font-weight: 800; color: var(--brand-dark); font-size: 18px; margin-bottom: 5px;">
+                            Palm Springs <span style="background: var(--brand-orange); color: white; font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-left: 8px; font-weight: 800; text-transform: uppercase;">Closest Office</span></h4>
+                        <p style="color: #6B7280; font-size: 14px;">560 S Paseo Dorotea, Suite 4-B, Palm Springs, CA 92264</p>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; align-items: start; gap: 15px; background: var(--brand-gray); padding: 20px; border-radius: 20px; border: 1px solid #E5E7EB;">
+                    <div
+                        style="background: var(--brand-purple); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">
+                        2</div>
+                    <div>
+                        <h4 style="font-weight: 800; color: var(--brand-dark); font-size: 18px; margin-bottom: 5px;">
+                            Rancho Mirage</h4>
+                        <p style="color: #6B7280; font-size: 14px;">35400 Bob Hope Dr. Suite 206, Rancho Mirage, CA 92270</p>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; align-items: start; gap: 15px; background: var(--brand-gray); padding: 20px; border-radius: 20px; border: 1px solid #E5E7EB;">
+                    <div
+                        style="background: var(--brand-purple); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">
+                        3</div>
+                    <div>
+                        <h4 style="font-weight: 800; color: var(--brand-dark); font-size: 18px; margin-bottom: 5px;">
+                            Twentynine Palms</h4>
+                        <p style="color: #6B7280; font-size: 14px;">72724 29 Palms Hwy. Suite 107, Twentynine Palms, CA 92277</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- GOOGLE MAP -->
+        <div
+            style="height: 550px; border-radius: 30px; overflow: hidden; box-shadow: 0 20px 60px rgba(96, 49, 119, 0.12);">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3416.7118465902095!2d-116.53856102412097!3d33.80582967324902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db1b58ab263901%3A0xa193fa021ad5815a!2s560%20S%20Paseo%20Dorotea%20%234b%2C%20Palm%20Springs%2C%20CA%2092264!5e0!3m2!1sen!2sus!4v1700000000000"
+                width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>"""
+        elif loc in twentynine_palms_group:
+            office_html = """            <!-- CLINIC DIRECTORY -->
+            <div style="display: grid; gap: 20px;">
+                <div
+                    style="display: flex; align-items: start; gap: 15px; background: var(--brand-gray); padding: 20px; border-radius: 20px; border: 1px solid #E5E7EB; border-left: 5px solid var(--brand-orange);">
+                    <div
+                        style="background: var(--brand-orange); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">
+                        1</div>
+                    <div>
+                        <h4 style="font-weight: 800; color: var(--brand-dark); font-size: 18px; margin-bottom: 5px;">
+                            Twentynine Palms <span style="background: var(--brand-orange); color: white; font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-left: 8px; font-weight: 800; text-transform: uppercase;">Closest Office</span></h4>
+                        <p style="color: #6B7280; font-size: 14px;">72724 29 Palms Hwy. Suite 107, Twentynine Palms, CA 92277</p>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; align-items: start; gap: 15px; background: var(--brand-gray); padding: 20px; border-radius: 20px; border: 1px solid #E5E7EB;">
+                    <div
+                        style="background: var(--brand-purple); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">
+                        2</div>
+                    <div>
+                        <h4 style="font-weight: 800; color: var(--brand-dark); font-size: 18px; margin-bottom: 5px;">
+                            Rancho Mirage</h4>
+                        <p style="color: #6B7280; font-size: 14px;">35400 Bob Hope Dr. Suite 206, Rancho Mirage, CA 92270</p>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; align-items: start; gap: 15px; background: var(--brand-gray); padding: 20px; border-radius: 20px; border: 1px solid #E5E7EB;">
+                    <div
+                        style="background: var(--brand-purple); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">
+                        3</div>
+                    <div>
+                        <h4 style="font-weight: 800; color: var(--brand-dark); font-size: 18px; margin-bottom: 5px;">
+                            Palm Springs</h4>
+                        <p style="color: #6B7280; font-size: 14px;">560 S Paseo Dorotea, Suite 4-B, Palm Springs, CA 92264</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- GOOGLE MAP -->
+        <div
+            style="height: 550px; border-radius: 30px; overflow: hidden; box-shadow: 0 20px 60px rgba(96, 49, 119, 0.12);">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.016335345718!2d-116.0592911241113!3d34.13327667312762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dad019fa76a445%3A0xb3cd2b027d142d17!2s72724%2029%20Palms%20Hwy%20%23107%2C%20Twentynine%20Palms%2C%20CA%2092277!5e0!3m2!1sen!2sus!4v1700000000000"
+                width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>"""
+        else:
+            office_html = """            <!-- CLINIC DIRECTORY -->
+            <div style="display: grid; gap: 20px;">
+                <div
+                    style="display: flex; align-items: start; gap: 15px; background: var(--brand-gray); padding: 20px; border-radius: 20px; border: 1px solid #E5E7EB; border-left: 5px solid var(--brand-orange);">
+                    <div
+                        style="background: var(--brand-orange); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">
+                        1</div>
+                    <div>
+                        <h4 style="font-weight: 800; color: var(--brand-dark); font-size: 18px; margin-bottom: 5px;">
+                            Rancho Mirage <span style="background: var(--brand-orange); color: white; font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-left: 8px; font-weight: 800; text-transform: uppercase;">Closest Office</span></h4>
+                        <p style="color: #6B7280; font-size: 14px;">35400 Bob Hope Dr. Suite 206, Rancho Mirage, CA 92270</p>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; align-items: start; gap: 15px; background: var(--brand-gray); padding: 20px; border-radius: 20px; border: 1px solid #E5E7EB;">
+                    <div
+                        style="background: var(--brand-purple); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">
+                        2</div>
+                    <div>
+                        <h4 style="font-weight: 800; color: var(--brand-dark); font-size: 18px; margin-bottom: 5px;">
+                            Palm Springs</h4>
+                        <p style="color: #6B7280; font-size: 14px;">560 S Paseo Dorotea, Suite 4-B, Palm Springs, CA 92264</p>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; align-items: start; gap: 15px; background: var(--brand-gray); padding: 20px; border-radius: 20px; border: 1px solid #E5E7EB;">
+                    <div
+                        style="background: var(--brand-purple); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">
+                        3</div>
+                    <div>
+                        <h4 style="font-weight: 800; color: var(--brand-dark); font-size: 18px; margin-bottom: 5px;">
+                            Twentynine Palms</h4>
+                        <p style="color: #6B7280; font-size: 14px;">72724 29 Palms Hwy. Suite 107, Twentynine Palms, CA 92277</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- GOOGLE MAP -->
+        <div
+            style="height: 550px; border-radius: 30px; overflow: hidden; box-shadow: 0 20px 60px rgba(96, 49, 119, 0.12);">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3415.7001479860367!2d-116.41725512411986!3d33.784534773258525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80db1be5165b4c69%3A0xe51f28b495204481!2s35400%20Bob%20Hope%20Dr%20%23206%2C%20Rancho%20Mirage%2C%20CA%2092270!5e0!3m2!1sen!2sus!4v1700000000000"
+                width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>"""
+
+        content = re.sub(r'(?s)<!--\s*CLINIC\s+DIRECTORY\s*-->.*?<\/iframe>\s*<\/div>', office_html, content)
         
         # Final catch-all for any remaining "Indio" case-insensitive (be careful)
         # content = re.sub(r'\bIndio\b', loc, content) 
